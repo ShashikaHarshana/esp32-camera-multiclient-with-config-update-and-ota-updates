@@ -398,7 +398,13 @@ void handleConfigUpdate()
   }
   
 
-  config.frame_size = FRAMESIZE_SVGA;
+  if (quality = 6){
+    config.frame_size = FRAMESIZE_SVGA;  
+  } else if (quality = 4) {
+    config.frame_size = FRAMESIZE_QVGA; 
+  } else if (10) {
+    config.frame_size = FRAMESIZE_UXGA;
+  }
 
   if (cam.init(config) != ESP_OK) {
     Serial.println("Error initializing the camera");
